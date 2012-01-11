@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Eshopservice" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2541/Eshopservice.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2541/Eshopservice.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2541/Eshopservice.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:2541/Eshopservice.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Resources" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="I_Eshopservice_GetAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProductsFromDataSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsFromDataSet" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProductsFromDataSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsFromDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetSiteMap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSiteMap" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetSiteMap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSiteMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetAllProductsByAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsByAmount" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetAllProductsByAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsByAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetAllProductsOutOfStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsOutOfStock" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetAllProductsOutOfStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsOutOfStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProductsBySearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsBySearch" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProductsBySearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsBySearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProductsByTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsByTags" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetProductsByTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsByTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_GetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_AdminGetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminGetOrders" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_AdminGetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminGetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_AdminGetOrdersByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminGetOrdersByDate" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_AdminGetOrdersByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminGetOrdersByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_InsertNewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewOrder" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_InsertNewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_InsertProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProduct" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_InsertProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_UpdateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrder" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_UpdateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_UpdateQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuantity" />
+  </wsdl:message>
+  <wsdl:message name="I_Eshopservice_UpdateQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuantityResponse" />
+  </wsdl:message>
+  <wsdl:portType name="I_Eshopservice">
+    <wsdl:operation name="GetAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetAllProducts" message="tns:I_Eshopservice_GetAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetAllProductsResponse" message="tns:I_Eshopservice_GetAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetProduct" message="tns:I_Eshopservice_GetProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetProductResponse" message="tns:I_Eshopservice_GetProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsFromDataSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetProductsFromDataSet" message="tns:I_Eshopservice_GetProductsFromDataSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetProductsFromDataSetResponse" message="tns:I_Eshopservice_GetProductsFromDataSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteMap">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetSiteMap" message="tns:I_Eshopservice_GetSiteMap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetSiteMapResponse" message="tns:I_Eshopservice_GetSiteMap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductsByAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetAllProductsByAmount" message="tns:I_Eshopservice_GetAllProductsByAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetAllProductsByAmountResponse" message="tns:I_Eshopservice_GetAllProductsByAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductsOutOfStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetAllProductsOutOfStock" message="tns:I_Eshopservice_GetAllProductsOutOfStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetAllProductsOutOfStockResponse" message="tns:I_Eshopservice_GetAllProductsOutOfStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsBySearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetProductsBySearch" message="tns:I_Eshopservice_GetProductsBySearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetProductsBySearchResponse" message="tns:I_Eshopservice_GetProductsBySearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetProductsByTags" message="tns:I_Eshopservice_GetProductsByTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetProductsByTagsResponse" message="tns:I_Eshopservice_GetProductsByTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetOrderDetails" message="tns:I_Eshopservice_GetOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetOrderDetailsResponse" message="tns:I_Eshopservice_GetOrderDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/GetOrders" message="tns:I_Eshopservice_GetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/GetOrdersResponse" message="tns:I_Eshopservice_GetOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminGetOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/AdminGetOrders" message="tns:I_Eshopservice_AdminGetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/AdminGetOrdersResponse" message="tns:I_Eshopservice_AdminGetOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminGetOrdersByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/AdminGetOrdersByDate" message="tns:I_Eshopservice_AdminGetOrdersByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/AdminGetOrdersByDateResponse" message="tns:I_Eshopservice_AdminGetOrdersByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/InsertNewOrder" message="tns:I_Eshopservice_InsertNewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/InsertNewOrderResponse" message="tns:I_Eshopservice_InsertNewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/InsertProduct" message="tns:I_Eshopservice_InsertProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/InsertProductResponse" message="tns:I_Eshopservice_InsertProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/UpdateOrder" message="tns:I_Eshopservice_UpdateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/UpdateOrderResponse" message="tns:I_Eshopservice_UpdateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/I_Eshopservice/UpdateQuantity" message="tns:I_Eshopservice_UpdateQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/I_Eshopservice/UpdateQuantityResponse" message="tns:I_Eshopservice_UpdateQuantity_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_I_Eshopservice" type="tns:I_Eshopservice">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllProducts">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsFromDataSet">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetProductsFromDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteMap">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetSiteMap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductsByAmount">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetAllProductsByAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProductsOutOfStock">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetAllProductsOutOfStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsBySearch">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetProductsBySearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByTags">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetProductsByTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/GetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminGetOrders">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/AdminGetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminGetOrdersByDate">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/AdminGetOrdersByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewOrder">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/InsertNewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProduct">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/InsertProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/UpdateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuantity">
+      <soap:operation soapAction="http://tempuri.org/I_Eshopservice/UpdateQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Eshopservice">
+    <wsdl:port name="BasicHttpBinding_I_Eshopservice" binding="tns:BasicHttpBinding_I_Eshopservice">
+      <soap:address location="http://localhost:2541/Eshopservice.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
