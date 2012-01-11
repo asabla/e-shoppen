@@ -1,0 +1,13 @@
+<profile enabled="true">
+      <properties>
+        <add name="FirstName" type="string"/>
+        <add name="LastName" type="string"/>
+        <add name="City" type="string"/>
+        <add name="Address" type="string"/>
+        <add name="Cart" type="Eshoppen.Shoppingcart"/>
+      </properties>
+      <providers>
+        <clear/>
+        <add name="AspNetSqlProfileProvider" type="System.Web.Profile.SqlProfileProvider" connectionStringName="ApplicationServices" applicationName="/"/>
+      </providers>
+    </profile>

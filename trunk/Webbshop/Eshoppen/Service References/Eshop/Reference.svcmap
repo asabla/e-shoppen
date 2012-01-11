@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7a302c85-3042-4f4b-a3f7-2309503daca5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2541/Eshopservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Eshopservice.xsd" MetadataType="Schema" ID="d171f26b-7447-4492-8c91-4eeaadd295fd" SourceId="1" SourceUrl="http://localhost:2541/Eshopservice.svc?xsd=xsd0" />
+    <MetadataFile FileName="Eshopservice.disco" MetadataType="Disco" ID="1dc1d419-3346-4a7b-82b6-e70fd0c23ff0" SourceId="1" SourceUrl="http://localhost:2541/Eshopservice.svc?disco" />
+    <MetadataFile FileName="Eshopservice1.xsd" MetadataType="Schema" ID="6d10217a-2a19-4281-94f5-c9c5d7f630fc" SourceId="1" SourceUrl="http://localhost:2541/Eshopservice.svc?xsd=xsd1" />
+    <MetadataFile FileName="Eshopservice.wsdl" MetadataType="Wsdl" ID="6d8f3167-474e-419b-bb8d-b0d066d78e45" SourceId="1" SourceUrl="http://localhost:2541/Eshopservice.svc?wsdl" />
+    <MetadataFile FileName="Eshopservice2.xsd" MetadataType="Schema" ID="6d95011e-dc62-40ac-bff3-b07d63aea340" SourceId="1" SourceUrl="http://localhost:2541/Eshopservice.svc?xsd=xsd2" />
+    <MetadataFile FileName="Eshopservice3.xsd" MetadataType="Schema" ID="d0bd5edf-5073-44cb-887e-bd9d0c7307c6" SourceId="1" SourceUrl="http://localhost:2541/Eshopservice.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
